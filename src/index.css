@@ -16,6 +16,7 @@ body {
   background-image: url('../public/gpgp_bg_light.png');
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
   border-bottom: 2rem solid #ff5451;
   min-height: 100vh;
 }
