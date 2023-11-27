@@ -10,7 +10,7 @@ export const pizzaData = [
     name: 'Pepperoni',
     ingredients: 'Sauce + Cheese + Pepperoni',
     price: 4,
-    photoName: 'pizzas/Pepperoni.webp',
+    photoName: 'pizzas/Recipe_Pepperoni.webp',
     soldOut: true,
   },
   {
@@ -49,44 +49,6 @@ export const pizzaData = [
     soldOut: false,
   },
   {
-    name: 'Bell Pepper',
-    ingredients: 'Sauce + Cheese + Bell Pepper',
-    price: 4,
-    photoName: 'pizzas/Recipe_Bell-Pepper.webp',
-    soldOut: false,
-  },
-  {
-    name: 'Classic Meat',
-    ingredients: 'Sauce + Cheese + Pepperoni + Sausage',
-    price: 7,
-    photoName: 'pizzas/Recipe_ClassicMeat.webp',
-    soldOut: true,
-  },
-  {
-    name: 'Vegetarian',
-    ingredients:
-      'Sauce + Cheese + Mushroom + Olive + Onion + Bell Pepper + Pineapple + Basil + Eggplant + Corn + Garlic + Sliced Tomato + Jalapeno + Avocado + Truffle + Fig + Zucchini + Artichoke',
-    price: 19,
-    photoName: 'pizzas/Recipe_Vegetarian.webp',
-    soldOut: false,
-  },
-  {
-    name: 'Vegan',
-    ingredients:
-      'Sauce + Mushroom + Olive + Onion + Bell Pepper + Pineapple + Basil + Eggplant + Corn + Garlic + Sliced Tomato + Jalapeno + Avocado + Truffle + Fig + Zucchini + Artichoke',
-    price: 18.5,
-    photoName: 'pizzas/Recipe_Vegan.webp',
-    soldOut: false,
-  },
-  {
-    name: 'Supreme',
-    ingredients:
-      'Sauce + Cheese + Pepperoni + Sausage + Mushroom + Olive + Onion + Bell Pepper',
-    price: 20,
-    photoName: 'pizzas/Recipe_Supreme.webp',
-    soldOut: false,
-  },
-  {
     name: 'Bacon',
     ingredients: 'Sauce + Cheese + Bacon',
     price: 4,
@@ -118,43 +80,7 @@ export const pizzaData = [
     name: 'Margherita',
     ingredients: 'Sauce + Cheese + Basil',
     price: 4,
-    photoName: 'pizzas/Recipe_Margherita.webp',
-    soldOut: false,
-  },
-  {
-    name: 'Meat Lovers',
-    ingredients: 'Sauce + Cheese + Pepperoni + Sausage + Bacon + Ham',
-    price: 20,
-    photoName: 'pizzas/Recipe_MeatLovers.webp',
-    soldOut: false,
-  },
-  {
-    name: 'Green Dream',
-    ingredients: 'Sauce + Cheese + Bell Pepper + Basil',
-    price: 5,
-    photoName: 'pizzas/Recipe_GreenDream.webp',
-    soldOut: true,
-  },
-  {
-    name: 'Salty Sailor',
-    ingredients: 'Sauce + Cheese + Olive + Anchovy',
-    price: 5,
-    photoName: 'pizzas/Recipe_SaltySailor.webp',
-    soldOut: false,
-  },
-  {
-    name: 'Fruity Pig',
-    ingredients:
-      'Sauce + Cheese + Pepperoni + Sausage + Olive + Bell Pepper + Bacon + Pineapple + Ham',
-    price: 5,
-    photoName: 'pizzas/Recipe_FruityPig.webp',
-    soldOut: true,
-  },
-  {
-    name: 'Stinky Pete',
-    ingredients: 'Sauce + Cheese + Onion + Anchovy',
-    price: 5,
-    photoName: 'pizzas/Recipe_FruityPig.webp',
+    photoName: 'pizzas/Recipe_Basil.webp',
     soldOut: false,
   },
   {
@@ -189,7 +115,7 @@ export const pizzaData = [
     name: 'Tomato',
     ingredients: 'Sauce + Cheese + Sliced Tomato',
     price: 4,
-    photoName: 'pizzas/Recipe_Sliced Tomato.webp',
+    photoName: 'pizzas/Recipe_Tomato.webp',
     soldOut: false,
   },
   {
@@ -239,6 +165,80 @@ export const pizzaData = [
     ingredients: 'Sauce + Cheese + Pumpkin',
     price: 5,
     photoName: 'pizzas/Recipe_Pumpkin.webp',
+    soldOut: false,
+  },
+  {
+    name: 'Bell Pepper',
+    ingredients: 'Sauce + Cheese + Bell Pepper',
+    price: 4,
+    photoName: 'pizzas/Recipe_Bell-Pepper.webp',
+    soldOut: false,
+  },
+  {
+    name: 'Classic Meat',
+    ingredients: 'Sauce + Cheese + Pepperoni + Sausage',
+    price: 7,
+    photoName: 'pizzas/Recipe_ClassicMeat.webp',
+    soldOut: true,
+  },
+  {
+    name: 'Green Dream',
+    ingredients: 'Sauce + Cheese + Bell Pepper + Basil',
+    price: 5,
+    photoName: 'pizzas/Recipe_GreenDream.webp',
+    soldOut: true,
+  },
+  {
+    name: 'Salty Sailor',
+    ingredients: 'Sauce + Cheese + Olive + Anchovy',
+    price: 5,
+    photoName: 'pizzas/Recipe_SaltySailor.webp',
+    soldOut: false,
+  },
+  {
+    name: 'Stinky Pete',
+    ingredients: 'Sauce + Cheese + Onion + Anchovy',
+    price: 5,
+    photoName: 'pizzas/Recipe_FruityPig.webp',
+    soldOut: false,
+  },
+  {
+    name: 'Meat Lovers',
+    ingredients: 'Sauce + Cheese + Pepperoni + Sausage + Bacon + Ham',
+    price: 20,
+    photoName: 'pizzas/Recipe_MeatLovers.webp',
+    soldOut: false,
+  },
+  {
+    name: 'Fruity Pig',
+    ingredients:
+      'Sauce + Cheese + Pepperoni + Sausage + Olive + Bell Pepper + Bacon + Pineapple + Ham',
+    price: 5,
+    photoName: 'pizzas/Recipe_FruityPig.webp',
+    soldOut: true,
+  },
+  {
+    name: 'Supreme',
+    ingredients:
+      'Sauce + Cheese + Pepperoni + Sausage + Mushroom + Olive + Onion + Bell Pepper',
+    price: 20,
+    photoName: 'pizzas/Recipe_Supreme.webp',
+    soldOut: false,
+  },
+  {
+    name: 'Vegetarian',
+    ingredients:
+      'Sauce + Cheese + Mushroom + Olive + Onion + Bell Pepper + Pineapple + Basil + Eggplant + Corn + Garlic + Sliced Tomato + Jalapeno + Avocado + Truffle + Fig + Zucchini + Artichoke',
+    price: 19,
+    photoName: 'pizzas/Recipe_Vegetarian.webp',
+    soldOut: false,
+  },
+  {
+    name: 'Vegan',
+    ingredients:
+      'Sauce + Mushroom + Olive + Onion + Bell Pepper + Pineapple + Basil + Eggplant + Corn + Garlic + Sliced Tomato + Jalapeno + Avocado + Truffle + Fig + Zucchini + Artichoke',
+    price: 18.5,
+    photoName: 'pizzas/Recipe_Vegan.webp',
     soldOut: false,
   },
 ];
