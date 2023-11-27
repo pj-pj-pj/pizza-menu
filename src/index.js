@@ -28,6 +28,8 @@ function Header() {
           alt='good-pizza-great-pizza-logo'
         />
       </a>
+      <p>We're currently open!</p>
+      <button className='btn'>Order</button>
     </header>
   );
 }
@@ -60,14 +62,8 @@ function Pizza({ pizzaProps }) {
 }
 
 function Footer() {
-  const hour = new Date().getHours();
-  const openHour = 12;
-  const closeHour = 22;
-  const isOpen = hour >= openHour && hour <= closeHour;
-
   return (
     <footer className='footer'>
-      <p>{new Date().toLocaleTimeString()}. We're currently open!</p>
       <p>
         This pizza menu is based on the game with the same title,{' '}
         <b>'Good Pizza, Great Pizza'</b>
@@ -76,7 +72,21 @@ function Footer() {
         available on the Apple Store, Google Playstore, Nintendo Switch, and
         Steam.
       </p>
-      <p>For more info, please check out:</p>
+      <p>
+        <b>For more info, please check out:</b>
+      </p>
+      <div className='credits-logo'>
+        <a
+          href='https://www.goodpizzagreatpizza.com/'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <img
+            src='gpgp_logo02.png'
+            alt='gpgp-logo'
+          />
+        </a>
+      </div>
     </footer>
   );
 }
