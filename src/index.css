@@ -13,17 +13,18 @@ body {
   font-family: 'Chalkboard SE', sans-serif;
   color: #252525;
   font-weight: 400;
-  background-color: #f7f2e9;
-  border-bottom: 1.6rem solid #edc84b;
+  background-image: url('../public/gpgp_bg_light.png');
+  background-attachment: fixed;
+  background-size: cover;
+  border-bottom: 2rem solid #ff5451;
   min-height: 100vh;
-  padding: 3.2rem;
-  padding-bottom: 6rem;
 }
 
 .container {
-  max-width: 80rem;
+  background-color: #f7f2e9;
+  max-width: 100rem;
   margin: 0 auto;
-
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,42 +33,26 @@ body {
 
 /* *************** */
 
-.header {
-  align-self: stretch;
+header {
+  max-width: 70rem;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  margin: 0 auto;
 }
 
-.header h1 {
-  /* Non-accessible color */
-  color: #edc84b;
-  /* color: #af8602; */
+.header a {
+  display: flex;
+  justify-content: center;
+}
 
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 5.2rem;
-  font-weight: 300;
-  letter-spacing: 3px;
+.header img {
   position: relative;
+  width: 90%;
+  transition: 0.2s;
+}
+.header img:hover {
   width: 100%;
-  display: block;
-}
-
-.header h1::before,
-.header h1::after {
-  display: block;
-  content: '';
-  height: 3px;
-  width: 12rem;
-  background-color: #edc84b;
-  position: absolute;
-  top: calc(50% - 1px);
-}
-
-.header h1::before {
-  left: 0;
-}
-
-.header h1::after {
-  right: 0;
 }
 
 /* *************** */
@@ -76,18 +61,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: 1rem;
+  margin: 2rem;
 }
 
 .menu h2 {
   display: inline-block;
-  padding: 1rem 0;
-  border-top: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
+  padding: 1rem;
   font-size: 2.4rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
   font-weight: 500;
+  background-color: #ff5451;
+  border-radius: 1rem;
+  color: #f7f2e9;
+  width: 100%;
+  text-align: center;
+}
+
+.menu h2:hover {
+  background-color: #e74d4b;
 }
 
 .menu > p {
@@ -100,13 +91,24 @@ body {
 .pizzas {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 4.8rem;
+  border: 0.2rem solid #ff5451;
+  padding: 3.5rem;
+  border-radius: 1rem;
 }
 
 .pizza {
   display: flex;
   gap: 3.2rem;
+  padding: 1rem;
+}
+
+.pizza:hover {
+  border-radius: 1rem;
+  background-color: rgb(241, 236, 227);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 .pizza img {
@@ -131,12 +133,12 @@ body {
   font-size: 1.4rem;
   font-weight: 300;
   font-style: italic;
-  margin-bottom: auto;
 }
 
 .pizza span {
   display: block;
   font-size: 1.6rem;
+  color: #ff5451;
 }
 
 .pizza.sold-out {
@@ -152,6 +154,25 @@ body {
 
 .footer {
   font-size: 1.4rem;
+  text-align: center;
+  margin-top: 5rem;
+  background-color: #f7f2e9;
+  padding: 3rem 0;
+}
+
+.footer p:first-child,
+.footer p:nth-child(4) {
+  margin: 5px;
+}
+
+.footer a {
+  font-weight: bold;
+  color: inherit;
+  margin: 0.5rem;
+}
+
+.footer a:hover {
+  color: #ff5451;
 }
 
 .order {
@@ -167,14 +188,20 @@ body {
   border: none;
   font-size: 1.4rem;
   font-weight: 500;
-  background-color: #edc84b;
+  background-color: #ff5451;
   padding: 1.4rem 3.2rem;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .btn:hover {
-  background-color: #e9bb24;
+  background-color: #ff5451;
+}
+
+@media only screen and (min-width: 680px) {
+  .pizzas {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /*
