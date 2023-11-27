@@ -18,6 +18,13 @@ function App() {
 function Header() {
   return (
     <header className='header'>
+      <button
+        onClick={toggleMode}
+        className='dark'
+        id='mode'
+      >
+        🌙
+      </button>
       <a
         href='https://www.goodpizzagreatpizza.com/'
         target='_blank'
@@ -89,6 +96,34 @@ function Footer() {
       </div>
     </footer>
   );
+}
+
+function toggleMode() {
+  const body = document.querySelector('body');
+  const button = document.querySelector('#mode');
+  const container = document.querySelector('.container');
+  const footer = document.querySelector('.footer');
+  if (button.classList.contains('dark')) {
+    body.style.backgroundImage = "url('/gpgp_bg_dark.png')";
+    body.style.color = '#f7f2e9';
+
+    container.style.backgroundColor = '#24153d';
+    footer.style.backgroundColor = '#24153d';
+
+    button.textContent = '☀️';
+    button.classList.add('light');
+    button.classList.remove('dark');
+  } else {
+    body.style.backgroundImage = "url('/gpgp_bg_light.png')";
+    body.style.color = '#252525';
+
+    container.style.backgroundColor = '#f7f2e9';
+    footer.style.backgroundColor = '#f7f2e9';
+
+    button.textContent = '🌙';
+    button.classList.add('dark');
+    button.classList.remove('light');
+  }
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

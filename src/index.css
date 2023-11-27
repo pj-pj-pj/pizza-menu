@@ -63,6 +63,23 @@ header {
   width: 100%;
 }
 
+.header #mode {
+  font-size: 20px;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  padding: 10px;
+  background-color: #ff5451;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.header #mode:hover {
+  background-color: transparent;
+  border: 2px solid #ff5451;
+}
+
 /* *************** */
 
 .menu {
@@ -114,7 +131,7 @@ header {
 
 .pizza:hover {
   border-radius: 1rem;
-  background-color: rgb(241, 236, 227);
+  background-color: rgba(0, 0, 0, 0.064);
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
