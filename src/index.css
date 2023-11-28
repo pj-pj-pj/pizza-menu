@@ -74,6 +74,7 @@ header {
   border-radius: 50%;
   border: 2px solid transparent;
   cursor: pointer;
+  z-index: 999999;
 }
 
 .header #mode:hover {
