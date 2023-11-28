@@ -36,9 +36,33 @@ function Header() {
           alt='good-pizza-great-pizza-logo'
         />
       </a>
-      <p>We're currently open!</p>
-      <button className='btn'>Order</button>
+      <AvailableHours />
     </header>
+  );
+}
+
+function AvailableHours() {
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const closeHour = 22;
+  const isOpen = hour >= openHour && hour <= closeHour;
+
+  return (
+    <>
+      {isOpen ? (
+        <>
+          <p>We're currently open!</p>
+          <button className='btn'>Order</button>
+        </>
+      ) : (
+        <>
+          <p>
+            Please come back between {openHour}:00 - {closeHour}:00
+          </p>
+          <div className='btn closed'>We're closed!</div>
+        </>
+      )}
+    </>
   );
 }
 
@@ -60,7 +84,7 @@ function Menu() {
 
 function Pizza({ pizzaProps }) {
   return (
-    <li className='pizza'>
+    <li className={`pizza ${pizzaProps.soldOut && 'sold-out'}`}>
       <img
         src={pizzaProps.photoName}
         alt={pizzaProps.name}
@@ -68,7 +92,9 @@ function Pizza({ pizzaProps }) {
       <div>
         <h3>{pizzaProps.name}</h3>
         <p>{pizzaProps.ingredients}</p>
-        <span>Price: {pizzaProps.price + 3}</span>
+        <span className={pizzaProps.soldOut && 'sold-out'}>
+          {pizzaProps.soldOut ? 'SOLD OUT' : `Price: ${pizzaProps.price + 3}`}
+        </span>
       </div>
     </li>
   );
@@ -79,11 +105,8 @@ function Footer() {
     <footer className='footer'>
       <p>
         This pizza menu is based on the game with the same title,{' '}
-        <b>'Good Pizza, Great Pizza'</b>
-      </p>
-      <p>
-        available on the Apple Store, Google Playstore, Nintendo Switch, and
-        Steam.
+        <b>'Good Pizza, Great Pizza'</b> available on the Apple Store, Google
+        Playstore, Nintendo Switch, and Steam.
       </p>
       <p>
         <b>For more info, please check out:</b>
