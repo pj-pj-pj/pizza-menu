@@ -190,10 +190,11 @@ header {
 .credits-logo {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .credits-logo img {
-  width: 100px;
+  height: 40px;
 }
 
 .order {

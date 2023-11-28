@@ -94,6 +94,17 @@ function Footer() {
             alt='gpgp-logo'
           />
         </a>
+        <a
+          href='https://github.com/pj-pj-pj/pizza-menu'
+          target='_blank'
+          rel='noreferrer'
+          className='github-link'
+        >
+          <img
+            src='github-logo.png'
+            alt='github-logo'
+          />
+        </a>
       </div>
     </footer>
   );
@@ -104,12 +115,14 @@ function toggleMode() {
   const button = document.querySelector('#mode');
   const container = document.querySelector('.container');
   const footer = document.querySelector('.footer');
+  const githubLogo = document.querySelector('.github-link');
   if (button.classList.contains('dark')) {
     body.style.backgroundImage = `url(${darkBg})`;
     body.style.color = '#f7f2e9';
 
     container.style.backgroundColor = '#24153d';
     footer.style.backgroundColor = '#24153d';
+    githubLogo.style.filter = 'invert(100%)';
 
     button.textContent = '☀️';
     button.classList.add('light');
@@ -120,6 +133,7 @@ function toggleMode() {
 
     container.style.backgroundColor = '#f7f2e9';
     footer.style.backgroundColor = '#f7f2e9';
+    githubLogo.style.filter = 'invert(0)';
 
     button.textContent = '🌙';
     button.classList.add('dark');
