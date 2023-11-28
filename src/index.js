@@ -43,19 +43,24 @@ function Header() {
 }
 
 function Menu() {
-  const pizzas = pizzaData.map((pizza) => <Pizza pizzaProps={pizza} />);
-
   return (
     <main className='menu'>
       <h2>Our menu</h2>
-      <div className='pizzas'>{pizzas}</div>
+      <ul className='pizzas'>
+        {pizzaData.map((pizza) => (
+          <Pizza
+            pizzaProps={pizza}
+            key={pizza.name}
+          />
+        ))}
+      </ul>
     </main>
   );
 }
 
 function Pizza({ pizzaProps }) {
   return (
-    <div className='pizza'>
+    <li className='pizza'>
       <img
         src={pizzaProps.photoName}
         alt={pizzaProps.name}
@@ -65,7 +70,7 @@ function Pizza({ pizzaProps }) {
         <p>{pizzaProps.ingredients}</p>
         <span>Price: {pizzaProps.price + 3}</span>
       </div>
-    </div>
+    </li>
   );
 }
 
