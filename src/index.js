@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { pizzaData } from './data';
 import './index.css';
+import { lightBg, darkBg } from './bgModesPath';
 
 function App() {
   return (
@@ -104,7 +105,7 @@ function toggleMode() {
   const container = document.querySelector('.container');
   const footer = document.querySelector('.footer');
   if (button.classList.contains('dark')) {
-    body.style.backgroundImage = "url('/gpgp_bg_dark.png')";
+    body.style.backgroundImage = `url(${darkBg})`;
     body.style.color = '#f7f2e9';
 
     container.style.backgroundColor = '#24153d';
@@ -114,7 +115,7 @@ function toggleMode() {
     button.classList.add('light');
     button.classList.remove('dark');
   } else {
-    body.style.backgroundImage = "url('/gpgp_bg_light.png')";
+    body.style.backgroundImage = `url(${lightBg})`;
     body.style.color = '#252525';
 
     container.style.backgroundColor = '#f7f2e9';
